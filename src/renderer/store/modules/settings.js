@@ -329,6 +329,7 @@ const sideEffectHandlers = {
     let targetLocale = value
     if (value === 'system') {
       const systemLocaleName = (await getSystemLocale()).replace('_', '-') // ex: en-US
+      console.log(systemLocaleName)
       const systemLocaleSplit = systemLocaleName.split('-') // ex: en
       const targetLocaleOptions = allLocales.filter((locale) => {
         // filter out other languages
